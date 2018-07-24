@@ -15,9 +15,9 @@ get_header();?>
 
                 the_post();
 
-                $image = get_field('post_image');
+                $image = get_the_post_thumbnail_url();
 
-                $author = get_field('post_author');
+                $author = get_the_author_meta('display_name');
 
                 $post_read_more = get_field('post_read_more');
 
@@ -31,7 +31,7 @@ get_header();?>
 
                     <?php if( !empty($image) ): ?>
 
-                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="blog__item__image">
+                        <img src="<?php echo $image; ?>" alt="post image" class="blog__item__image">
 
                     <?php endif; ?>
                 </div>

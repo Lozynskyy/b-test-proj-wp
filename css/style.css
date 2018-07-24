@@ -979,6 +979,9 @@ ul.slick-dots {
   padding-bottom: 26px;
   padding-top: 17px; }
 
+.slick-slide {
+  outline: none; }
+
 .find-franchise {
   height: 130px;
   background-color: #ffdd00;

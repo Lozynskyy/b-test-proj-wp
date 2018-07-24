@@ -43,21 +43,13 @@
 
         $header_logo = get_field('header_logo', 'option');
 
-        $header_link_text = get_field('header_link_text', 'option');
-
         $header_main_menu = get_field('header_main_menu', 'option');
 
         $header_additional_menu = get_field('header_additional_menu', 'option');
 
         $header_modal_text = get_field('header_modal_text');
 
-        $header_modal_button_text = get_field('header_modal_button_text');
-
-        $contact_link = get_page_link(93);
-
-        $locations_link = get_page_link(81);
-
-        $home_link = get_page_link(77);
+        $home_link = get_field('home_link', 'option');
 
     endwhile;
 
@@ -71,13 +63,19 @@ endif;?>
 
             <div class="header__custom-element">
 
-                <a href="<?php echo $locations_link; ?>" class="header__custom-element__link">
+            <?php
 
-                    <span class="header__custom-element__text">
+            $header_link = get_field('header_link', 'option');
 
-                        <?php echo $header_link_text; ?>
+            if( $header_link ): ?>
 
-                    </span>
+                <a href="<?php echo $header_link['url']; ?>" class="header__custom-element__link">
+
+                <span class="header__custom-element__text">
+
+                    <?php echo $header_link['title']; ?>
+
+                </span>
 
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7" height="10" viewBox="0 0 7 10" class="header__custom-element__img">
 
@@ -86,6 +84,8 @@ endif;?>
                     </svg>
 
                 </a>
+
+            <?php endif; ?>
 
             </div>
 
@@ -169,9 +169,15 @@ endif;?>
 
                 <button class="modal-button">
 
-                    <a href="<?php echo $contact_link; ?>" class="button__link">
+                <?php
 
-                        <?php echo $header_modal_button_text ?>
+                $header_modal_button = get_field('header_modal_button');
+
+                if( $header_modal_button ): ?>
+
+                    <a href="<?php echo $header_modal_button['url']; ?>" class="button__link">
+
+                        <?php echo $header_modal_button['title']; ?>
 
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7" height="10" viewBox="0 0 7 10" class="modal-button__icon">
 
@@ -180,6 +186,8 @@ endif;?>
                         </svg>
 
                     </a>
+
+                <?php endif; ?>
 
                 </button>
 
