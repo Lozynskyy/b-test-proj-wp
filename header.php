@@ -53,6 +53,11 @@
             $thumbnail = get_the_post_thumbnail_url(206);
         }
 
+        elseif (get_post_type() == 'post') {
+
+            $thumbnail = get_the_post_thumbnail_url(74);
+        }
+
         else $thumbnail = get_the_post_thumbnail_url();
 
         $header_logo = get_field('header_logo', 'option');
@@ -147,11 +152,11 @@ endif;?>
 
                 <nav class="header__menu header__menu--secondary">
 
-                    <span class="header__menu__burger_2">
+                    <div class="header__menu__burger_2">
 
-                        <?php echo $header_additional_menu; ?>
+                        <div></div>
 
-                    </span>
+                    </div>
 
                     <?php wp_nav_menu(array(
 
