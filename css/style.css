@@ -307,7 +307,6 @@ template {
 
 :root {
   --main-color: #db302c;
-
   --secondary-color: #ffdd00;
 }
 
@@ -339,7 +338,7 @@ template {
       align-items: flex-start; } }
   @media (max-width: 560px) {
     .header__panel__content {
-      width: 98%; } }
+      width: 96%; } }
 
 @media (max-width: 800px) {
   .header__custom-element {
@@ -387,7 +386,7 @@ template {
   text-align: right;
   cursor: pointer;
   width: 35px;
-  margin: 8px 0 8px auto; }
+  margin: 36px 0 8px auto; }
   .header__menu__burger_2:after, .header__menu__burger_2:before, .header__menu__burger_2 div {
     background-color: #fff;
     -o-border-radius: 3px;
@@ -466,7 +465,8 @@ template {
   display: inline-block;
   position: relative;
   color: #ffffff;
-  transition: color 0.5s; }
+  transition: color 0.5s;
+  margin: 0; }
   @media (max-width: 1024px) {
     .header__menu__item {
       padding-left: 8px; } }
@@ -511,7 +511,6 @@ template {
   position: absolute;
   list-style: none;
   padding: 0;
-  border: none;
   background: #ffffff;
   left: -80px;
   bottom: -44px;
@@ -520,7 +519,8 @@ template {
   border-top: 10px solid black; }
   .sub-menu li {
     padding: 10px;
-    color: #000000; }
+    color: #000000;
+    margin: 0; }
     .sub-menu li:hover {
       color: var(--main-color); }
     .sub-menu li.active {
@@ -551,7 +551,8 @@ template {
     font-family: Helvetica, sans-serif;
     font-size: 12px;
     font-weight: 400;
-    margin: 0; }
+    margin: 0;
+    line-height: inherit; }
     @media (max-width: 1024px) {
       .footer__copyright {
         margin-right: 10px; } }
@@ -584,7 +585,8 @@ template {
     font-size: 12px;
     font-weight: 400;
     line-height: 20px;
-    color: #f7f8f8; }
+    color: #f7f8f8;
+    margin: 0; }
   .footer__menu a {
     color: inherit; }
 
@@ -1083,7 +1085,8 @@ ul.slick-dots {
       font-family: Helvetica, sans-serif;
       font-size: 16px;
       font-weight: 700;
-      margin: 0; }
+      margin: 0;
+      line-height: inherit; }
       @media (max-width: 1024px) {
         .find-franchise__text__bot {
           font-size: 14px; } }
@@ -1237,10 +1240,15 @@ ul.slick-dots {
       background-size: cover; } }
   @media (max-width: 800px) {
     .get-started__item {
-      margin-bottom: 20px; } }
+      margin-bottom: 20px;
+      width: 520px;
+      height: 254px; } }
   @media (max-width: 560px) {
     .get-started__item {
-      width: 288px; } }
+      margin-left: 15px;
+      margin-right: 15px;
+      width: 100%;
+      height: 200px; } }
   .get-started__item--1 {
     background-image: url("../img/residential.png"); }
   .get-started__item--2 {
@@ -1566,10 +1574,22 @@ ul.slick-dots {
     margin-right: 23px;
     display: inline;
     float: left; }
+    @media (max-width: 960px) {
+      .page__info .alignleft, .page__info img.alignleft {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto; } }
   .page__info .alignright, .page__info img.alignright {
     margin-left: 17px;
     display: inline;
     float: right; }
+    @media (max-width: 960px) {
+      .page__info .alignright, .page__info img.alignright {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto; } }
   .page__info .aligncenter, .page__info img.aligncenter {
     margin-right: auto;
     margin-left: auto;
@@ -1610,8 +1630,10 @@ ul.slick-dots {
   .page__info img {
     max-width: 100%;
     height: 100%;
-    margin-bottom: 10px;
-  }
+    margin-bottom: 10px; }
+  @media (max-width: 960px) {
+    .page__info h1, .page__info h2, .page__info h3, .page__info h4, .page__info h5, .page__info h6 {
+      text-align: center; } }
 
 .page__title {
   color: var(--main-color);
@@ -1668,10 +1690,22 @@ ul.slick-dots {
     margin-right: 1.5em;
     display: inline;
     float: left; }
+    @media (max-width: 960px) {
+      .service__info .alignleft, .service__info img.alignleft {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto; } }
   .service__info .alignright, .service__info img.alignright {
     margin-left: 1.5em;
     display: inline;
     float: right; }
+    @media (max-width: 960px) {
+      .service__info .alignright, .service__info img.alignright {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto; } }
   .service__info .aligncenter, .service__info img.aligncenter {
     margin-right: auto;
     margin-left: auto;
@@ -1712,8 +1746,10 @@ ul.slick-dots {
   .service__info img {
     max-width: 100%;
     height: 100%;
-    margin-bottom: 10px;
-  }
+    margin-bottom: 10px; }
+  @media (max-width: 960px) {
+    .service__info h1, .service__info h2, .service__info h3, .service__info h4, .service__info h5, .service__info h6 {
+      text-align: center; } }
 
 .service__title {
   color: var(--main-color);
@@ -1802,71 +1838,69 @@ ul.slick-dots {
       width: auto;
       max-width: 100%; } }
 
-.all-services__content {
-  width: 1200px;
-  margin: 0 auto; }
-  @media (max-width: 1280px) {
-    .all-services__content {
-      width: 90%; } }
-
-.all-services__title {
-  color: var(--main-color);
-  font-family: "Eurostile LT Std - Demi", sans-serif;
-  font-size: 32px;
-  font-weight: 400;
-  text-align: center;
-  margin: 46px 0 5px 0; }
-
-.all-services__description {
-  color: #000000;
-  font-family: Helvetica, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 23px;
-  width: 440px;
-  margin: 0 auto;
-  text-align: center; }
-  @media (max-width: 560px) {
-    .all-services__description {
-      display: none; } }
-
-.all-services__table {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 32px;
-  justify-content: space-between; }
-  @media (max-width: 1280px) {
-    .all-services__table {
-      justify-content: space-around; } }
-
-.all-services__item {
-  width: 380px;
-  margin: 10px 0; }
-  @media (max-width: 1280px) {
-    .all-services__item {
-      width: 430px; } }
-  @media (max-width: 1024px) {
-    .all-services__item {
-      width: 350px; } }
-  @media (max-width: 800px) {
-    .all-services__item {
-      width: 70%; } }
-  @media (max-width: 600px) {
-    .all-services__item {
-      width: 90%; } }
-  .all-services__item__image {
-    width: 100%; }
-  .all-services__item__title {
-    text-align: center;
-    color: #000000;
+.all-services {
+  margin-bottom: 16px; }
+  .all-services__content {
+    width: 1200px;
+    margin: 0 auto 16px; }
+    @media (max-width: 1280px) {
+      .all-services__content {
+        width: 90%; } }
+  .all-services__title {
+    color: var(--main-color);
     font-family: "Eurostile LT Std - Demi", sans-serif;
-    font-size: 20px;
-    font-weight: 400; }
-  .all-services__item__link {
-    color: inherit;
-    text-decoration: none; }
-    .all-services__item__link:hover {
-      color: var(--main-color); }
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    margin: 46px 0 5px 0; }
+  .all-services__description {
+    color: #000000;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+    width: 440px;
+    margin: 0 auto;
+    text-align: center; }
+    @media (max-width: 560px) {
+      .all-services__description {
+        display: none; } }
+  .all-services__table {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 32px;
+    justify-content: space-between; }
+    @media (max-width: 1280px) {
+      .all-services__table {
+        justify-content: space-around; } }
+  .all-services__item {
+    width: 380px;
+    margin: 10px 0; }
+    @media (max-width: 1280px) {
+      .all-services__item {
+        width: 430px; } }
+    @media (max-width: 1024px) {
+      .all-services__item {
+        width: 350px; } }
+    @media (max-width: 800px) {
+      .all-services__item {
+        width: 70%; } }
+    @media (max-width: 600px) {
+      .all-services__item {
+        width: 90%; } }
+    .all-services__item__image {
+      width: 100%; }
+    .all-services__item__title {
+      text-align: center;
+      color: #000000;
+      font-family: "Eurostile LT Std - Demi", sans-serif;
+      font-size: 20px;
+      font-weight: 400; }
+    .all-services__item__link {
+      color: inherit;
+      text-decoration: none; }
+      .all-services__item__link:hover {
+        color: var(--main-color); }
 
 .gallery__content {
   width: 1200px;
@@ -2056,10 +2090,22 @@ ul.slick-dots {
     margin-right: 1.5em;
     display: inline;
     float: left; }
+    @media (max-width: 960px) {
+      .post__info .alignleft, .post__info img.alignleft {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto; } }
   .post__info .alignright, .post__info img.alignright {
     margin-left: 1.5em;
     display: inline;
     float: right; }
+    @media (max-width: 960px) {
+      .post__info .alignright, .post__info img.alignright {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto; } }
   .post__info .aligncenter, .post__info img.aligncenter {
     margin-right: auto;
     margin-left: auto;
@@ -2100,8 +2146,10 @@ ul.slick-dots {
   .post__info img {
     max-width: 100%;
     height: 100%;
-    margin-bottom: 10px;
-  }
+    margin-bottom: 10px; }
+  @media (max-width: 960px) {
+    .post__info h1, .post__info h2, .post__info h3, .post__info h4, .post__info h5, .post__info h6 {
+      text-align: center; } }
 
 .post__title {
   color: var(--main-color);
@@ -2250,7 +2298,8 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--main-color);
   font-family: "Eurostile LT Std - Demi", sans-serif;
   font-weight: 400;
-  margin: 0; }
+  margin: 0;
+  margin-bottom: 10px; }
 
 h1 {
   font-size: 38px; }
@@ -2283,6 +2332,9 @@ td, th {
 th {
   color: var(--main-color);
   font-family: "Eurostile LT Std", sans-serif; }
+
+li {
+  margin: 5px 0; }
 
 .header__bg-img--wwa {
   background-image: url("../img/wwa-bg.png");
